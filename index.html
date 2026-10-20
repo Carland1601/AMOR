@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#8c0f2e">
+<title>Para mi niña linda ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true"></div>
+<div id="bar" aria-hidden="true"><i></i></div>
+<button id="back" hidden aria-label="Volver a la escena anterior">←</button>
+<button id="mus" aria-label="Activar o pausar música">🎵</button>
+
+<main id="stage">
+  <!-- ESCENA 0: CARTA CERRADA -->
+  <section class="scene on" id="s0">
+    <div class="env" id="env" role="button" tabindex="0" aria-label="Abrir la carta">
+      <div class="paper"><p>Para la niña que hace latir mi corazón de una manera diferente... ❤️</p></div>
+      <div class="back"></div>
+      <div class="flap"></div>
+      <div class="front"></div>
+      <div class="seal">❤</div>
+    </div>
+    <p class="hint" id="h0">Toca o desliza hacia arriba para abrir 💌</p>
+    <p class="hint" id="h0b" hidden>Desliza para descubrir tu sorpresa 💌</p>
+  </section>
+
+  <!-- ESCENA 1: ¿CUÁNTO ME AMAS? -->
+  <section class="scene" id="s1">
+    <h2 class="title">Mi niña linda, ¿cuánto me amas? ❤️</h2>
+    <div id="trk" aria-label="Control de amor"><div id="fill"></div><div id="thumb">❤</div></div>
+    <p id="pct">0%</p>
+    <div id="msg" hidden>
+      <p class="big">Uuuuuu, lo siento, mi niña linda... ❤️🥹 ¡Pero aun así sigues sin ganarme! 😘💕</p>
+      <p>Puedes probarlo otra vez, mi niña linda. 💗</p>
+      <button class="btn" id="retry">Intentar otra vez 💗</button>
+      <button class="btn" id="n1">Continuar 💕</button>
+    </div>
+    <div id="big">❤</div>
+  </section>
+
+  <!-- ESCENA 2: TIEMPO JUNTOS -->
+  <section class="scene" id="s2">
+    <h2 class="title">Nuestra historia, nuestro tiempo, nuestro amor ❤️</h2>
+    <div class="card"><small>Nos conocimos el 5 de febrero de 2026</small>
+      <p>Tenemos <b class="num" id="d1">0</b> días de conocernos. 💕</p></div>
+    <div class="card"><small>Nuestra historia de amor comenzó el 16 de marzo de 2026</small>
+      <p><b class="num" id="d2">0</b> días</p>
+      <p>Desde aquel 16 de marzo, mi corazón tiene una historia favorita: la nuestra. ❤️</p></div>
+    <p class="quote">No me creo aún el tiempo que hemos pasado juntos, pero sí me creo que pasaremos una vida juntos. <span class="beat">❤️</span></p>
+    <button class="btn" id="n2">Continuar nuestra historia 💕</button>
+  </section>
+
+  <!-- ESCENA 3: NUESTRA CANCIÓN -->
+  <section class="scene" id="s3">
+    <h2 class="title">Nuestra canción 🎶</h2>
+    <div class="player" id="pl">
+      <div class="cover" id="cover"><img id="coverImg" src="assets/images/portada-cancion.jpg" alt="Portada de la canción"><span class="cph">🎵</span></div>
+      <h3 id="song"></h3><p id="artist"></p>
+      <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Progreso">
+      <div class="times"><span id="cur">0:00</span><span id="dur">--:--</span></div>
+      <div class="ctrl"><button id="play" aria-label="Reproducir o pausar">▶</button>
+        <label>🔊 <input type="range" id="vol" min="0" max="1" step="0.05" value="0.8" aria-label="Volumen"></label></div>
+      <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p id="amsg" class="note" hidden>Aún falta colocar el archivo de audio 🎧</p>
+    </div>
+    <p class="quote sm">Hemos escuchado esta canción en el carro tantas veces hasta enamorarnos. ❤️🚗🎶</p>
+    <button class="btn" id="n3">Continuar a nuestros recuerdos 💖</button>
+  </section>
+
+  <!-- ESCENA 4: RECUERDOS + CARTA -->
+  <section class="scene" id="s4">
+    <h2 class="title">Nuestros recuerdos</h2>
+    <p class="quote sm">El amor no solo se siente, nosotros aprendimos a vivirlo. ❤️</p>
+    <article class="letter rv"><h3>Mi carta para ti 💌</h3><div id="cuerpo"></div>
+      <p class="end">Con todo mi amor, para mi niña linda. ❤️</p><p class="sign" id="firma"></p></article>
+  </section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
